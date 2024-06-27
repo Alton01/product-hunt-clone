@@ -331,8 +331,11 @@ const NewProduct = () => {
       <div className="px-8 md:w-3/5 md:mx-auto">
         {step === 1 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold"> 📦 New Product</h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <h1 className="text-4xl font-semibold text-center">
+              {" "}
+              📦 New Product
+            </h1>
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               Ready to showcase your products to the world? You came to the
               right place. Follow the steps below to get started.
             </p>
@@ -350,7 +353,7 @@ const NewProduct = () => {
               </div>
             </div>
             <div className="mt-10">
-              <h2 className="font-medium">
+              <h2 className="font-medium ">
                 Slug (URL) - This will be used to create a unique URL for your
                 product.
               </h2>
@@ -365,16 +368,16 @@ const NewProduct = () => {
         )}
         {step === 2 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold">
+            <h1 className="text-4xl font-semibold text-center">
               📊 What Category does your product belong to ?
             </h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               Choose at least 3 categories that best fits your product. This
               will help people discover your prooduct.
             </p>
             <div className="mt-10">
               <h2 className="font-medium">Select Categories</h2>
-              <div className="grid grid-cols-4 gap-2 pt-4 items-center justify-center">
+              <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 pt-4 items-center justify-center">
                 {categories.map((category, index) => (
                   <div
                     onClick={() => handleCategoryToggle(category)}
@@ -399,13 +402,16 @@ const NewProduct = () => {
         )}
         {step === 3 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold"> 📝 Product Details</h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <h1 className="text-4xl font-semibold text-center">
+              {" "}
+              📝 Product Details
+            </h1>
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               Keep it simple and clear. Describe your product in a way that
               makes it easy for people to understand what it does.
             </p>
             <div className="mt-10">
-              <h2 className="font-medium">Headline</h2>
+              <h2 className="font-medium ">Headline</h2>
               <input
                 type="text"
                 value={headline}
@@ -434,10 +440,10 @@ const NewProduct = () => {
         )}
         {step === 4 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold">
+            <h1 className="text-4xl font-semibold text-center">
               Add images to showcase your product
             </h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               Include images that best describe your product. This will help
               people understand what your product looks like
             </p>
@@ -491,8 +497,11 @@ const NewProduct = () => {
 
         {step === 5 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold"> 📅 Release Date</h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <h1 className="text-4xl font-semibold text-center">
+              {" "}
+              📅 Release Date
+            </h1>
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               When will the product be available to the public? Set a date to
               continue
             </p>
@@ -530,8 +539,10 @@ const NewProduct = () => {
 
         {step === 6 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold">Additional links</h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <h1 className="text-4xl font-semibold text-center">
+              Additional links
+            </h1>
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               Add links to your product&apos;s website, social media and other
               platforms.
             </p>
@@ -581,12 +592,14 @@ const NewProduct = () => {
 
         {step === 7 && (
           <div className="space-y-10">
-            <h1 className="text-4xl font-semibold">Review & Submit</h1>
-            <p className="text-xl font-light mt-4 leading-8">
+            <h1 className="text-4xl font-semibold text-center">
+              Review & Submit
+            </h1>
+            <p className="text-xl font-light mt-4 leading-8 text-center">
               Review the details of your product and submit it to the world.
               Your product will be reviewed by our team before it goes live.
             </p>
-            <div className="mt-10 grid grid-cols-2 gap-8">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="">
                 <div className="font-semibold">Name of the product</div>
                 <div className=" mt-2 text-gray-600">{name}</div>
@@ -660,8 +673,10 @@ const NewProduct = () => {
 
         {step === 8 && (
           <div className="space-y-10">
-            <div className="text-4xl font-semibold">Congratulations</div>
-            <div>
+            <div className="text-4xl font-semibold text-center">
+              Congratulations
+            </div>
+            <div className="text-center">
               Your product has been successfully submitted. Our team will review
               it and get back to you soon.
             </div>
