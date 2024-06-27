@@ -16,10 +16,6 @@ const HomeLayout = async ({
 
   const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
 
-  if (!authenticatedUser) {
-    redirect("/");
-  }
-
   return (
     <html lang="en">
       <body>
