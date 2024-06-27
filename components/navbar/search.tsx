@@ -74,9 +74,9 @@ const Search = () => {
 
   return (
     <div
-      className="
-        rounded-full 
-        flex items-center
+      className=" hidden sm:flex
+        rounded-full
+         items-center
          text-gray-500 
          ml-4 
          bg-[#f5f8ff]

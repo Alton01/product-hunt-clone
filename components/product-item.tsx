@@ -108,24 +108,27 @@ const ProductItem: React.FC<ProductItemProps> = ({
             alt="logo"
             width={1000}
             height={1000}
-            className="h-12 w-12 rounded-md"
+            className="h-20 w-16 rounded-md"
           />
 
           <div className="ml-4">
-            <div className="md:flex items-center gap-x-2">
-              <h1 className="text-sm font-semibold">{product.name}</h1>
-              <p className="hidden md:flex text-xs">-</p>
-              <p className="text-gray-500 text-xs md:text-sm pr-2">
+            <div className="lg:flex items-center gap-x-2">
+              <h1 className="text-sm font-semibold text-black truncate">
+                {product.name}
+              </h1>
+              <p className="hidden lg:flex text-xs">-</p>
+              <p className="text-gray-500 text-xs md:text-sm pr-2 truncate">
                 {product.headline}
               </p>
               <div
                 onClick={handleArrowClick}
-                className="hidden md:flex cursor-pointer"
+                className="flex cursor-pointer hover:underline text-xs lg:mx-2 mt-1 lg:mt-0 text-[#ff6154]"
               >
-                <PiArrowBendDoubleUpRight />
+                Visit Website
+                {/*} <PiArrowBendDoubleUpRight /> */}
               </div>
             </div>
-            <div className="hidden md:flex gap-x-2 items-center">
+            <div className="hidden md:flex gap-x-2 items-center mt-2">
               <div className="text-xs text-gray-500 flex gap-x-1 items-center">
                 {product.commentsLength}
                 <PiChatCircle />

@@ -21,8 +21,7 @@ const CarouselComponent: React.FC<CarouselProps> = ({ productImages }) => {
       }}
       className="
       w-full
-      overflow-hidden
-      md:overflow-visible
+      overflow-visible
       "
     >
       <CarouselContent>
@@ -32,7 +31,7 @@ const CarouselComponent: React.FC<CarouselProps> = ({ productImages }) => {
           <CarouselItem
             key={index}
             className="
-          basis-1/2 
+          md:basis-1/2 sm:basis-full
     "
           >
             <Image

@@ -16,11 +16,11 @@ const MyProducts = async () => {
 
   const isPremium = await isUserPremium();
   return (
-    <div className="mx-auto lg:w-3/5 py-10 px-6">
+    <div className="mx-auto lg:w-4/5 py-10 px-6">
       {products?.length === 0 ? (
         <div>
-          <h1 className="text-3xl font-bold">No Products Found</h1>
-          <p className="text-gray-500">
+          <h1 className="text-3xl font-bold text-center">No Products Found</h1>
+          <p className="text-gray-500 text-center">
             Looks like you have not created any products yet. Click the button
             below to get started
           </p>
@@ -33,8 +33,11 @@ const MyProducts = async () => {
         </div>
       ) : (
         <div>
-          <h1 className="text-3xl font-bold">Your Products</h1>
-          <p> Manage your products here.</p>
+          <h1 className="text-3xl font-bold text-center">Your Products</h1>
+          <p className="text-center text-xl mt-4">
+            {" "}
+            Manage your products here.
+          </p>
           {isPremium ? (
             <div className="flex gap-x-4 items-center mt-10">
               <PiCrown className="text-2xl text-orange-300" />
@@ -46,7 +49,7 @@ const MyProducts = async () => {
             </>
           )}
 
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mt-10">
             {products?.map((product) => (
               <Link href={`/edit/${product.id}`} key={product.id}>
                 <div>
@@ -59,7 +62,7 @@ const MyProducts = async () => {
                       alt="logo"
                       width={1000}
                       height={1000}
-                      className="object-cover rounded-lg h-36 w-full"
+                      className="object-center rounded-lg h-64 w-full"
                     />
                   </div>
                 </div>

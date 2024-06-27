@@ -18,10 +18,8 @@ const ProductPage = async ({ params }: { params: IParams }) => {
 
   const productImageUrls = product.images.map((image: any) => image.url);
 
-  console.log(product, "product info");
-
   return (
-    <div className="mx-auto md:w-3/5 px-6 py-10 md:px-0">
+    <div className="mx-auto md:w-4/5 px-6 py-10 ">
       <div className="flex items-center justify-between">
         <div className="flex gap-x-4 items-center">
           <Image
@@ -29,11 +27,15 @@ const ProductPage = async ({ params }: { params: IParams }) => {
             alt="logo"
             width={1000}
             height={1000}
-            className="w-16 h-16 md:w-24 md:h-24 rounded-md cursor-pointer"
+            className="w-24 h-24 rounded-md cursor-pointer"
           />
           <div>
-            <h2 className="font-semibold text-xl">{product.name}</h2>
-            <p className="text-gray-500 text-sm py-2">{product.headline}</p>
+            <h2 className="font-semibold text-xl text-[#ff6154] truncate">
+              {product.name}
+            </h2>
+            <p className="text-gray-500 text-sm py-2 truncate">
+              {product.headline}
+            </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {product.categories.map((category: any) => (
@@ -41,7 +43,7 @@ const ProductPage = async ({ params }: { params: IParams }) => {
                   href={`/category/${category.name.toLowerCase()}`}
                   key={category.id}
                   className="bg-gray-100 text-gray-600 
-                            px-4 py-2 rounded-md
+                            px-2 py-2 rounded-md
                              cursor-pointer"
                 >
                   <h2 className="text-xs text-center">{category.name}</h2>
@@ -55,12 +57,12 @@ const ProductPage = async ({ params }: { params: IParams }) => {
       </div>
 
       {product.description && (
-        <div className="pt-4">
+        <div className="pt-8">
           <p className="text-gray-500">{product.description}</p>
         </div>
       )}
 
-      <div className="pt-4">
+      <div className="pt-6 px-4">
         <CarouselComponent productImages={productImageUrls} />
       </div>
 

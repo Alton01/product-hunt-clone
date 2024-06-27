@@ -126,7 +126,7 @@ const EditProductForm: React.FC<EditProductFormProps> = ({ product }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-4 mt-10">
         <div>
           <h1 className="font-medium">Logo</h1>
           {isEditingLogo ? (
@@ -228,9 +228,9 @@ const EditProductForm: React.FC<EditProductFormProps> = ({ product }) => {
           />
         </div>
 
-        <div className="col-span-2">
+        <div>
           <h1 className="font-medium">Categories</h1>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-3  gap-4 mt-4">
             {product.categories.map((category: any) => (
               <div key={category.id}>
                 <div
@@ -244,10 +244,10 @@ const EditProductForm: React.FC<EditProductFormProps> = ({ product }) => {
           </div>
         </div>
 
-        <div className="col-span-2">
+        <div>
           <div className="font-medium mb-2">Product Images</div>
           {isEditingProductImages ? null : (
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {uploadedProductImages.length > 0 &&
                 uploadedProductImages.map((url: string) => (
                   <div key={url}>

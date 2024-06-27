@@ -32,7 +32,7 @@ const Avatar: React.FC<AvatarProps> = ({ authenticatedUser }) => {
           />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-40 space-y-1 p-2 text-gray-600">
-          <DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <Link
               href="/my-products"
               className="flex gap-x-2 rounded-sm w-full cursor-pointer"
@@ -41,7 +41,7 @@ const Avatar: React.FC<AvatarProps> = ({ authenticatedUser }) => {
               My Products
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <div
               onClick={handleMyUpvotes}
               className="flex gap-x-2 rounded-sm w-full cursor-pointer"
@@ -50,7 +50,7 @@ const Avatar: React.FC<AvatarProps> = ({ authenticatedUser }) => {
               Upvoted
             </div>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <Link
               href="/settings"
               className="flex gap-x-2 rounded-sm w-full cursor-pointer"
@@ -58,7 +58,7 @@ const Avatar: React.FC<AvatarProps> = ({ authenticatedUser }) => {
               <PiGear className="text-xl" /> Settings
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <div onClick={() => signOut()}>Log out</div>
           </DropdownMenuItem>
         </DropdownMenuContent>

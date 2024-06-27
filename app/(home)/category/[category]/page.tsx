@@ -22,7 +22,7 @@ const CategoryPage: React.FC<{ params: IParams }> = async ({ params }) => {
   const products = await getProductsByCategoryName(capitalizedCategory);
 
   return (
-    <div className="md:w-3/5 mx-auto pt-10 px-6 md:px-0">
+    <div className="w-4/5 mx-auto pt-10 px-6 md:px-0">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -39,8 +39,10 @@ const CategoryPage: React.FC<{ params: IParams }> = async ({ params }) => {
         </BreadcrumbList>
       </Breadcrumb>
 
-      <h1 className="text-4xl font-semibold pt-10">{capitalizedCategory}</h1>
-      <p className="text-gray-500 pt-2">
+      <h1 className="text-4xl font-semibold pt-10 text-center text-[#ff6154] uppercase">
+        {capitalizedCategory}
+      </h1>
+      <p className="text-gray-500 pt-2 text-center">
         Check out whats&apos;s going on in the {capitalizedCategory}! Discover
         new products
       </p>
@@ -57,11 +59,13 @@ const CategoryPage: React.FC<{ params: IParams }> = async ({ params }) => {
               alt="logo"
               width={1000}
               height={1000}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-md cursor-pointer"
+              className="w-16 h-16 md:w-28 md:h-24 rounded-md cursor-pointer"
             />
             <div>
-              <h2 className="font-semibold text-lg">{product.name}</h2>
-              <p className="text-gray-500 text-sm md:py-2">
+              <h2 className="font-semibold text-lg text-[#ff6154] capitalize truncate">
+                {product.name}
+              </h2>
+              <p className="text-gray-500 text-sm md:py-2 truncate">
                 {product.headline}
               </p>
             </div>

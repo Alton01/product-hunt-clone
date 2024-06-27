@@ -44,12 +44,14 @@ const ActivateProductModalContent: React.FC<
           className="text-5xl 
             text-emerald-500 mb-4 bg-emerald-100 p-1 rounded-md"
         />
-        <h1 className="text-3xl font-bold mb-4">Activate Product</h1>
-        <p className="text-gray-500 mb-4">
+        <h1 className="text-3xl font-bold mb-4 text-center">
+          Activate Product
+        </h1>
+        <p className="text-gray-500 mb-4 text-center">
           Are you sure you want to activate this product ?
         </p>
 
-        <p className="pb-10 text-gray-500">
+        <p className="pb-10 text-gray-500 text-center">
           Once activated, the product will be visible to the public and users
           will be able to interact with it
         </p>

@@ -113,9 +113,11 @@ const ProductModalContent: React.FC<ProductModalContentProps> = ({
         />
 
         <div className="py-4 space-y-2">
-          <h1 className="text-2xl font-semibold">{currentProduct.name}</h1>
+          <h1 className="text-2xl font-semibold text-[#ff6154] truncate">
+            {currentProduct.name}
+          </h1>
           <div className="md:flex md:justify-between items-center">
-            <p className="text-gray-600 text-xl font-light md:w-3/5">
+            <p className="text-gray-600 text-xl font-light md:w-3/5 truncate">
               {currentProduct.headline}
             </p>
 

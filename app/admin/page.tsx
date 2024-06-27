@@ -53,8 +53,10 @@ const Admin = async () => {
             </Link>
 
             <div className="hidden md:block">
-              <h1 className="text-3xl font-bold">Welcome back admin</h1>
-              <p className="text-gray-500">
+              <h1 className="text-3xl font-bold text-center">
+                Welcome back admin
+              </h1>
+              <p className="text-gray-500 text-center">
                 Here is what&apos;s happening in your business today
               </p>
             </div>
@@ -65,7 +67,7 @@ const Admin = async () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-md font-bold">Users</CardTitle>👤
@@ -143,7 +145,7 @@ const Admin = async () => {
         <Separator className="my-10" />
 
         <div className="pb-10 space-y-10">
-          <h1 className="text-2xl font-bold">Pending Products</h1>
+          <h1 className="text-2xl font-bold text-center">Pending Products</h1>
           <PendingProducts
             pendingProducts={pendingProducts}
             authenticatedUser={authenticatedUser}

@@ -26,14 +26,20 @@ const ProductIDPage = async ({ params }: { params: Iparams }) => {
   const product = await getProductById(params.productId);
 
   if (!product) {
-    return <div>Product not found!!!</div>;
+    return (
+      <div className=" flex items-center justify-center min-h-screen ">
+        <div className=" flex text-center text-[#ff6154] font-semibold">
+          Product not found!!!
+        </div>
+      </div>
+    );
   }
 
   const productRank = await getRankById();
 
   return (
     <div className="md:4/5 mx-auto px-6 py-10">
-      <Link href="/my-products" className="flex gap-x-4">
+      <Link href="/my-products" className="flex gap-x-4 mb-3">
         <PiArrowLeft className="text-2xl text-gray-500" />
         <p>Go Back</p>
       </Link>
@@ -44,13 +50,13 @@ const ProductIDPage = async ({ params }: { params: Iparams }) => {
             alt="logo"
             width={500}
             height={500}
-            className="rounded-lg border h-20 w-20 md:h-40 md:w-40"
+            className="rounded-lg border h-20 w-20 md:h-40 md:w-40 hidden sm:block"
           />
           <div className="space-y-1">
-            <h1 className="text-3xl font-medium">{product.name}</h1>
-            <p className="text-gray-500 text-sm w-3/4 px-1">
-              {product.website}
-            </p>
+            <h1 className="text-3xl font-medium text-[#ff6154] truncate">
+              {product.name}
+            </h1>
+            <p className="text-gray-500 text-sm px-1">{product.website}</p>
 
             {product.status === "PENDING" && (
               <Badge className="bg-orange-400">Pending</Badge>
@@ -71,7 +77,7 @@ const ProductIDPage = async ({ params }: { params: Iparams }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card>
           <CardHeader
             className="flex flex-row items-center 
@@ -80,7 +86,7 @@ const ProductIDPage = async ({ params }: { params: Iparams }) => {
             <CardTitle>Current Rank</CardTitle> 🏅
           </CardHeader>
           <CardContent>
-            <div className="text-2xl">
+            <div className="text-2xl text-center">
               {productRank
                 ? productRank.findIndex((p) => p.id === product.id) + 1
                 : "N/A"}
@@ -96,7 +102,9 @@ const ProductIDPage = async ({ params }: { params: Iparams }) => {
             <CardTitle>Comments </CardTitle> 💬
           </CardHeader>
           <CardContent>
-            <div className="text-2xl">{product.comments.length}</div>
+            <div className="text-2xl text-center">
+              {product.comments.length}
+            </div>
           </CardContent>
         </Card>
 
@@ -108,7 +116,7 @@ const ProductIDPage = async ({ params }: { params: Iparams }) => {
             <CardTitle>Upvotes </CardTitle> 🔺
           </CardHeader>
           <CardContent>
-            <div className="text-2xl">{product.upvotes.length}</div>
+            <div className="text-2xl text-center">{product.upvotes.length}</div>
           </CardContent>
         </Card>
       </div>

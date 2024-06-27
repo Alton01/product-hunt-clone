@@ -14,13 +14,13 @@ const MyUpvotedProducts = async () => {
   const products = await getUpvotedProducts();
 
   return (
-    <div className="mx-auto md:w-3/5 pt-10 px-6 md:px-0">
+    <div className="mx-auto md:w-4/5 pt-10 px-6 md:px-0">
       {products.length === 0 ? (
-        <div>
-          <h1 className="text-3xl font-bold">
+        <div className="flex items-center justify-center">
+          <h1 className="text-3xl font-bold text-[#ff6154] text-center">
             You have not upvoted any products yet
           </h1>
-          <p className="text-gray-500 pt-4">
+          <p className="text-gray-500 pt-4 text-center">
             Upvote products to get started, and they will be displayed here
           </p>
         </div>

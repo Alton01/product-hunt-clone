@@ -8,9 +8,9 @@ const GoToWebsite: React.FC<GoToWebsiteProps> = ({ website }) => {
   return (
     <div
       onClick={() => window.open(website, "_blank")}
-      className="hidden lg:flex hover:underline cursor-pointer"
+      className="hidden md:flex hover:underline cursor-pointer text-[#ff6154] ml-2"
     >
-      Go to website
+      Visit Website
     </div>
   );
 };

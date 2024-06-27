@@ -70,8 +70,6 @@ const PendingProducts: React.FC<PendingProductsProps> = ({
     };
   });
 
-  console.log(formattedProducts, "formatted products here");
-
   const handleViewProductModal = (product: any) => {
     const formattedProduct = formattedProducts.find(
       (formattedProduct: any) => formattedProduct.id === product.id
@@ -104,12 +102,14 @@ const PendingProducts: React.FC<PendingProductsProps> = ({
                 alt="logo"
                 width={200}
                 height={200}
-                className="w-16 md:w-20 rounded-md cursor-pointer"
+                className="w-24 h-24 rounded-md cursor-pointer hidden md:flex"
               />
 
               <div className="space-y-2">
-                <h1 className="text-2xl font-bold">{product.name} </h1>
-                <p className="hidden md:flex text-gray-500 text-sm pr-6">
+                <h1 className="text-2xl font-bold text-black truncate">
+                  {product.name}{" "}
+                </h1>
+                <p className="hidden lf:flex text-gray-500 text-sm pr-4 line-clamp-2 truncate">
                   {product.description}
                 </p>
                 <div className="hidden md:flex text-gray-500 font-semibold">

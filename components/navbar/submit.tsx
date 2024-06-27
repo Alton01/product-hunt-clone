@@ -29,7 +29,7 @@ const Submit: React.FC<SubmitProps> = ({ products, authenticatedUser }) => {
   return (
     <div>
       <button onClick={handleClick} className="text-[#ff6154]">
-        Submit
+        Add Product
       </button>
       <MembershipModal
         visible={isUpgradeModalVisible}

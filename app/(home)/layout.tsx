@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import Navbar from "@/components/navbar/navbar";
 import Spinner from "@/components/spinner";
 import { getNotifications, getProductsByUserId } from "@/lib/server-actions";
+import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
 const HomeLayout = async ({
@@ -14,6 +15,10 @@ const HomeLayout = async ({
   const notifications = await getNotifications();
 
   const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
+
+  if (!authenticatedUser) {
+    redirect("/");
+  }
 
   return (
     <html lang="en">

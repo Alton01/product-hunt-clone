@@ -65,22 +65,26 @@ const DeleteProduct: React.FC<DeleteProductProps> = ({ productId }) => {
         <div>
           <PiStorefront
             className="text-red-500 mb-10 text-5xl
-             bg-red-100 p-1 rounded-md"
+             bg-red-100 p-1 rounded-md text-center"
           />
-          <h1 className="text-xl font-semibold mb-10">Delete Product</h1>
+          <h1 className="text-xl font-semibold mb-10 text-center text-red-500">
+            Delete Product
+          </h1>
 
-          <p className="text-sm">
+          <p className="text-sm text-center">
             We&apos;re sorry to see you go. Once your product is deleted, all of
             your content will be permanently gone, including your products and
             product settings.
           </p>
 
-          <p className="text-sm py-10">
+          <p className="text-sm py-10 text-center">
             This action cannot be undone. This will permanently delete your
             product and all of your content.
           </p>
 
-          <p className="text-sm">To confirm deletion, type “delete” below:</p>
+          <p className="text-sm text-center">
+            To confirm deletion, type “delete” below:
+          </p>
 
           <input
             type="text"

@@ -48,17 +48,17 @@ const RejectProductModalContent: React.FC<RejectProductModalContentProps> = ({
             text-5xl mb-4 bg-red-100 p-1 
             rounded-md"
         />
-        <h1 className="text-3xl font-bold mb-4">Reject Product</h1>
-        <p className="text-gray-500 mb-4">
+        <h1 className="text-3xl font-bold mb-4 text-center">Reject Product</h1>
+        <p className="text-gray-500 mb-4 text-center">
           Are you sure you want to reject this product?
         </p>
-        <p className="  text-gray-500">
+        <p className="  text-gray-500 text-center">
           Once rejected, the owner will be notified with the neccessary steps to
           take.
         </p>
 
         <div>
-          <h1 className="text-gray-500 py-4 font-semibold">
+          <h1 className="text-gray-500 py-4 font-semibold text-center">
             Reason for rejection
           </h1>
 

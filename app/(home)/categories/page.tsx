@@ -5,17 +5,17 @@ const Categories = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="xl:w-3/5 w-4/5 pt-6 md:py-10 mx-auto px-6 md:px-0">
+    <div className=" w-4/5 pt-6 md:py-10 mx-auto px-6 md:px-0">
       <div className="bg-gray-100 rounded-md w-full p-10 ">
-        <h1 className="text-4xl font-semibold">Categories</h1>
-        <p className="text-gray-500 pt-2">
+        <h1 className="text-4xl font-semibold text-center">Categories</h1>
+        <p className="text-gray-500 pt-2 text-center">
           Discover new products in different categories and find what you need
           to make your life easier
         </p>
       </div>
 
       <div>
-        <div className="pt-10 grid grid-cols-2 gap-6">
+        <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {categories.map((category: any) => (
             <Link
               href={`/category/${category.name.toLowerCase()}`}
@@ -30,9 +30,9 @@ const Categories = async () => {
                   
                   "
             >
-              <div className="md:flex justify-between">
+              <div className="flex flex-col lg:flex-row lg:justify-between">
                 <h2 className="md:text-2xl font-semibold">{category.name}</h2>
-                <p className="hover:underline cursor-pointer text-sm">
+                <p className="hover:underline cursor-pointer text-sm mt-1">
                   View all products
                 </p>
               </div>
