@@ -23,7 +23,7 @@ import {
 import { format } from "date-fns";
 import { Separator } from "@/components/ui/separator";
 import { createProduct } from "@/lib/server-actions";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { toast } from "sonner";
 
 const categories = [
@@ -330,13 +330,7 @@ const NewProduct = () => {
     <div className="flex items-center justify-center py-8 md:py-20">
       <div className="px-8 md:w-3/5 md:mx-auto">
         {step === 1 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold"> 📦 New Product</h1>
             <p className="text-xl font-light mt-4 leading-8">
               Ready to showcase your products to the world? You came to the
@@ -367,16 +361,10 @@ const NewProduct = () => {
                 readOnly
               />
             </div>
-          </motion.div>
+          </div>
         )}
         {step === 2 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold">
               📊 What Category does your product belong to ?
             </h1>
@@ -388,11 +376,10 @@ const NewProduct = () => {
               <h2 className="font-medium">Select Categories</h2>
               <div className="grid grid-cols-4 gap-2 pt-4 items-center justify-center">
                 {categories.map((category, index) => (
-                  <motion.div
+                  <div
                     onClick={() => handleCategoryToggle(category)}
                     key={index}
                     className="flex border rounded-full"
-                    whileTap={{ scale: 0.9 }}
                   >
                     <div
                       className={`text-xs md:text-sm p-2 cursor-pointer w-full text-center 
@@ -404,20 +391,14 @@ const NewProduct = () => {
                     >
                       {category}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
         {step === 3 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold"> 📝 Product Details</h1>
             <p className="text-xl font-light mt-4 leading-8">
               Keep it simple and clear. Describe your product in a way that
@@ -449,16 +430,10 @@ const NewProduct = () => {
                 {shortDescription.length} / 300
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
         {step === 4 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold">
               Add images to showcase your product
             </h1>
@@ -511,17 +486,11 @@ const NewProduct = () => {
                 />
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {step === 5 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold"> 📅 Release Date</h1>
             <p className="text-xl font-light mt-4 leading-8">
               When will the product be available to the public? Set a date to
@@ -556,17 +525,11 @@ const NewProduct = () => {
                 </Popover>
               </>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {step === 6 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold">Additional links</h1>
             <p className="text-xl font-light mt-4 leading-8">
               Add links to your product&apos;s website, social media and other
@@ -613,17 +576,11 @@ const NewProduct = () => {
                 onChange={handleDiscordChange}
               />
             </div>
-          </motion.div>
+          </div>
         )}
 
         {step === 7 && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // Slide in from the right
-            animate={{ opacity: 1, x: 0 }} // Slide to the center
-            exit={{ opacity: 0, x: "-100%" }} // Slide out to the left
-            transition={{ duration: 0.3 }}
-            className="space-y-10"
-          >
+          <div className="space-y-10">
             <h1 className="text-4xl font-semibold">Review & Submit</h1>
             <p className="text-xl font-light mt-4 leading-8">
               Review the details of your product and submit it to the world.
@@ -698,7 +655,7 @@ const NewProduct = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {step === 8 && (
