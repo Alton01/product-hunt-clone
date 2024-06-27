@@ -41,7 +41,7 @@ const Settings = async () => {
 
           <hr />
 
-          {isPremium ? (
+          {/*} {isPremium ? (
             <>
               <ManageBilling />
             </>
@@ -52,7 +52,7 @@ const Settings = async () => {
             >
               Membership Info
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
