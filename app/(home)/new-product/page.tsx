@@ -468,7 +468,7 @@ const NewProduct = () => {
             </div>
             <div className="mt-4">
               <div className="font-medium">
-                Product Images ( upload atleast 3 images )
+                Product Images ( upload at least 3 images )
               </div>
               {uploadedProductImages.length > 0 ? (
                 <div className="mt-2 md:flex gap-2 space-y-4 md:space-y-0">
