@@ -117,7 +117,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                 {product.name}
               </h1>
               <p className="hidden lg:flex text-xs">-</p>
-              <p className="text-gray-500 text-xs md:text-sm pr-2 truncate">
+              <p className="text-gray-500 hidden lg:flex text-xs md:text-sm pr-2 truncate">
                 {product.headline}
               </p>
               <div
@@ -159,7 +159,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
           </div>
         </div>
 
-        <div className="text-sm">
+        <div className="text-sm ml-2">
           <motion.div
             onClick={handleUpvoteClick}
             variants={variants}
