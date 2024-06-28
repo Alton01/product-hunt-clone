@@ -1,15 +1,11 @@
 import { auth } from "@/auth";
 import Navbar from "@/components/navbar/navbar";
 import Spinner from "@/components/spinner";
-import {
-  getNotifications,
-  getProductsByUserId,
-  isUserPremium,
-} from "@/lib/server-actions";
+import { getNotifications, getProductsByUserId } from "@/lib/server-actions";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
-const NewProductLayout = async ({
+const HomeLayout = async ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -19,16 +15,6 @@ const NewProductLayout = async ({
   const notifications = await getNotifications();
 
   const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
-
-  const isPremium = await isUserPremium();
-
-  if (!isPremium && products.length === 2) {
-    redirect("/");
-  }
-
-  if (!authenticatedUser) {
-    redirect("/");
-  }
 
   return (
     <html lang="en">
@@ -46,4 +32,4 @@ const NewProductLayout = async ({
   );
 };
 
-export default NewProductLayout;
+export default HomeLayout;
