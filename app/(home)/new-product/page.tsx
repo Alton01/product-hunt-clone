@@ -25,7 +25,11 @@ const page = async () => {
   }
   return (
     <>
-      <NewProduct isPremium={isPremium} products={products} />
+      <NewProduct
+        isPremium={isPremium}
+        products={products}
+        authenticatedUser={authenticatedUser}
+      />
     </>
   );
 };

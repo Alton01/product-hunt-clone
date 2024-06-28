@@ -75,8 +75,6 @@ const ActiveProducts: React.FC<ActiveProductsProps> = async ({
     };
   });
 
-  console.log(formattedActiveProducts, "formattedActiveProducts");
-
   return (
     <div className="w-full">
       <div className="flex items-center border-b pb-3">

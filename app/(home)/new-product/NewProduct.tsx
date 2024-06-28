@@ -28,6 +28,7 @@ import { toast } from "sonner";
 
 interface NewProductProps {
   isPremium: boolean;
+  authenticatedUser: any;
   products: any;
 }
 
@@ -60,7 +61,11 @@ const categories = [
   "Analytics",
 ];
 
-const NewProduct = ({ isPremium, products }: NewProductProps) => {
+const NewProduct = ({
+  isPremium,
+  products,
+  authenticatedUser,
+}: NewProductProps) => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
   const [slug, setSlug] = useState("");
