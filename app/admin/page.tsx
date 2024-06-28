@@ -34,8 +34,6 @@ const Admin = async () => {
 
   const premiumUsers = users.filter((user) => user.isPremium);
 
-  console.log(pendingProducts, "pending products here");
-
   return (
     <div className="px-8 md:px-20">
       <div>
