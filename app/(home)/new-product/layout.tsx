@@ -30,15 +30,7 @@ const NewProductLayout = async ({
 
   return (
     <html lang="en">
-      <body>
-        <Navbar
-          authenticatedUser={authenticatedUser}
-          products={products}
-          notifications={notifications}
-        />
-
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 };
